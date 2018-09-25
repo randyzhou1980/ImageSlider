@@ -1,0 +1,7 @@
+<h2 class="text-muted">Gallery</h2>
+
+<app-carousel-multi-item (selectedImgSrc)="onSelectImage($event)"></app-carousel-multi-item>
+
+<div class="gallery-view-item">
+    <img [src]="selectedImgSrc" alt="Card image cap">
+</div>

@@ -1,0 +1,44 @@
+$topnav-background-color: #222222;
+
+.sidebar{
+    border-radius: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 55px;
+    left: 235px;
+    width: 235px;
+    margin-left: -235px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: darken($topnav-background-color, 50%);
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+
+    .list-group .nav-item .nav-link{
+        background: darken($topnav-background-color, 50%);
+        border: 0;
+        border-radius: 0;
+        color: #999;
+        text-decoration: none;
+        .fa {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: lighten($topnav-background-color, 5%);
+            color: #fff;            
+        }
+
+        &.active {
+            background: lighten($topnav-background-color, 5%);
+            color: #fff;            
+        }
+    }
+}

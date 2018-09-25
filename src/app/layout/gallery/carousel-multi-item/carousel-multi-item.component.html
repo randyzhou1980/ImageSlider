@@ -1,0 +1,30 @@
+<div class="carousel-multi-item-container">
+  
+  <div class="carousel-multi-item-wrapper row">
+    <div class="carousel-multi-items"
+      [style.transform]="'translateX('+offset+'px)'"
+      [style.webkitTransform]="'translateX('+offset+'px)'"
+      #itemList
+    >
+      <div class="col-sm-6 col-md-4 col-lg-2 card item" *ngFor="let galleryItem of galleryItems" >
+          <img [src]="galleryItem.src" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">{{galleryItem.title}}</h5>
+              <p class="card-text">{{galleryItem.description}}</p>
+              <a class="btn btn-primary" (click)="onSelectImage(galleryItem.src)">Full Size</a>
+            </div>            
+      </div> 
+
+    </div>
+         
+  </div>
+
+  <div class="carousel-multi-item-controls">
+    <a class="btn text-primary" (click)="onSlide(1, itemList)" [class.disabled]="lastItemIndex <= itemIndex">
+      <i class="fa fa-4x fa-angle-left" aria-hidden="true"></i>
+    </a>
+    <a class="btn text-primary" (click)="onSlide(-1, itemList)" [class.disabled]="itemIndex === 0">
+      <i class="fa fa-4x fa-angle-right" aria-hidden="true"></i>
+    </a>    
+  </div>  
+</div>
